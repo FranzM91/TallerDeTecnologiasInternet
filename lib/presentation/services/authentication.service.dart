@@ -4,7 +4,6 @@ import '../../config/services/local_storage.dart';
 
 class AuthenticationService {
   String _BASE_URL = "https://stslab.qhanati.com/websda/api";
-  @override
   Future<String> registerUser(String userName, String email, String password) async{
     try {
       final Dio dio = Dio();
@@ -20,8 +19,6 @@ class AuthenticationService {
       return e.toString();
     }
   }
-
-  @override
   Future<String> loginUser(String email, String password) async {
     try {
       final Dio dio = Dio();
